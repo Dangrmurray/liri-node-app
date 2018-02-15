@@ -121,3 +121,23 @@ Thu Feb 15 02:36:15 +0000 2018
 tweet #19 continue to ignore me
 Thu Feb 15 02:35:50 +0000 2018
 please ignore me for the next 20 tweets. i have to do this for a coding project
+COMMAND: node liri.js movie-this 'terminator'
+Movie Title: undefined
+Release Year: undefined
+IMDB Rating: undefined
+Production Country: undefined
+Plot: undefined
+Language: undefined
+Rotten Tomatoes Rating: undefined
+Actors/Actresses: undefined
+Rotten Tomatoes URL: undefined
+COMMAND: node liri.js movie-this 'terminator'
+Movie Title: undefined
+Release Year: undefined
+IMDB Rating: undefined
+Production Country: undefined
+Language: undefined
+Actors/Actresses: undefined
+Plot: undefined
+Rotten Tomatoes Rating: undefined
+Rotten Tomatoes URL: undefined

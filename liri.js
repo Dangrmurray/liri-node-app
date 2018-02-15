@@ -85,7 +85,7 @@ function myTweets() {
 // end the myTweets function
 }
 
-// // if the spotify-this-song command is received
+// if the spotify-this-song command is received
 // function mySpotify(receivedSong) {
 
 // 	// first save the name of the song
@@ -130,8 +130,8 @@ function movieThis(receivedMovie) {
 	console.log(myMovie)
 
 	// Then run a request to the OMDB API with the movie specified
-	Request("http://www.omdbapi.com/?t=" + myMovie + "&y=&plot=short&r=json&tomatoes=true", function (error, response, body) {
-		console.log(this.result)
+	Request("http://www.omdbapi.com/?apikey=b6e94218&?t=" + myMovie + "&y=&plot=short&r=json&tomatoes=true", function (error, response, body) {
+		// console.log(response)
 
 		// If the request is successful (i.e. if the response status code is 200)
 		if (!error && response.statusCode === 200) {
