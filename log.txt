@@ -369,3 +369,64 @@ Artist Name: Camila Cabello
 Song Name: Never Be the Same
 Album Title: Never Be the Same
 Preview Link: https://p.scdn.co/mp3-preview/6f69fa346305ec36d6849b1b9745715d2bead70f?cid=294138ad16734a9eb79f0d7bf6b2e67d
+COMMAND: node liri.js my-tweets
+Thu Feb 15 02:42:11 +0000 2018
+tweet #1 continue to ignore me
+Thu Feb 15 02:42:04 +0000 2018
+tweet #2 continue to ignore me
+Thu Feb 15 02:41:54 +0000 2018
+tweet #3 continue to ignore me
+Thu Feb 15 02:41:45 +0000 2018
+tweet #4 continue to ignore me
+Thu Feb 15 02:41:26 +0000 2018
+tweet #5 continue to ignore me
+Thu Feb 15 02:41:18 +0000 2018
+tweet #6 continue to ignore me
+Thu Feb 15 02:41:04 +0000 2018
+tweet #7 continue to ignore me
+Thu Feb 15 02:40:56 +0000 2018
+tweet #8 continue to ignore me
+Thu Feb 15 02:40:48 +0000 2018
+tweet #9 continue to ignore me
+Thu Feb 15 02:40:40 +0000 2018
+tweet #10 continue to ignore me
+Thu Feb 15 02:40:30 +0000 2018
+tweet #11 continue to ignore me
+Thu Feb 15 02:40:22 +0000 2018
+Thu Feb 15 02:40:16 +0000 2018
+tweet #12 continue to ignore me
+tweet #13 continue to ignore me
+Thu Feb 15 02:39:51 +0000 2018
+tweet #14 continue to ignore me
+Thu Feb 15 02:39:44 +0000 2018
+tweet #15 continue to ignore me
+Thu Feb 15 02:39:38 +0000 2018
+tweet #16 continue to ignore me
+tweet #17 continue to ignore me
+Thu Feb 15 02:39:31 +0000 2018
+Thu Feb 15 02:39:23 +0000 2018
+tweet #18 continue to ignore me
+Thu Feb 15 02:36:15 +0000 2018
+tweet #19 continue to ignore me
+Thu Feb 15 02:35:50 +0000 2018
+please ignore me for the next 20 tweets. i have to do this for a coding project
+COMMAND: node liri.js movie-this 'beauty and the beast'
+Movie Title: Beauty and the Beast
+Release Year: 1991
+IMDB Rating: 8.0
+Production Country: USA
+Language: English, French
+Plot: A young woman whose father has been imprisoned by a terrifying beast offers herself in his place, unaware that her captor is actually a prince, physically altered by a magic spell.
+Actors/Actresses: Robby Benson, Jesse Corti, Rex Everhart, Angela Lansbury
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/beauty_and_the_beast_1991/
+COMMAND: node liri.js movie-this 'beauty and the beast'
+Movie Title: Beauty and the Beast
+Release Year: 1991
+IMDB Rating: 8.0
+Production Country: USA
+Language: English, French
+Plot: A young woman whose father has been imprisoned by a terrifying beast offers herself in his place, unaware that her captor is actually a prince, physically altered by a magic spell.
+Actors/Actresses: Robby Benson, Jesse Corti, Rex Everhart, Angela Lansbury
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/beauty_and_the_beast_1991/

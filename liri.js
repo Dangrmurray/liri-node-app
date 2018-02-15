@@ -1,5 +1,7 @@
-// require the keys.js file that holds the twitter keys
-var twitterKeysObject = require('./keys.js');
+// require the keys.js file that holds the keys
+var TwitterKeys = require('./keys.js');
+var SpotifyKeys = require('./keys.js');
+var OMDBAPIKey = require('./keys.js');
 
 // require twitter, spotify, and request NPM libraries
 // install libraries before running this app with the following commands:
@@ -135,7 +137,7 @@ function movieThis(receivedMovie) {
 	console.log(myMovie)
 
 	// Then run a request to the OMDB API with the movie specified
-	Request("http://www.omdbapi.com/?t=" + myMovie + "&y=&plot=short&r=json&tomatoes=true&apikey=40e9cece", function (error, response, body) {
+	Request("http://www.omdbapi.com/?t=" + myMovie + "&y=&plot=short&r=json&tomatoes=true&" + OMDBAPIKey, function (error, response, body) {
 		// console.log(response)
 
 		// If the request is successful (i.e. if the response status code is 200)
