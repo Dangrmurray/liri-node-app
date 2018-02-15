@@ -1,11 +1,11 @@
 // require the keys.js file that holds the twitter keys
-// var twitterKeysObject = require('./keys.js');
+var twitterKeysObject = require('./keys.js');
 
 // require twitter, spotify, and request NPM libraries
 // install libraries before running this app with the following commands:
 // npm install twitter, npm install spotify, npm install request
 var Twitter = require('twitter');
-// var Spotify = require('spotify');
+var Spotify = require('node-spotify-api');
 var Request = require('request');
 
 // require Node built in fs library package for filesystem access
@@ -32,9 +32,9 @@ switch (command) {
 		break;
 
 	// // handle the spotify-this-song command
-	// case 'spotify-this-song':
-	// 	mySpotify(commandArgument);
-	// 	break;
+	case 'spotify-this-song':
+		mySpotify(commandArgument);
+		break;
 
 	// handle the movie-this command
 	case 'movie-this':
@@ -86,39 +86,44 @@ function myTweets() {
 }
 
 // if the spotify-this-song command is received
-// function mySpotify(receivedSong) {
+function mySpotify(receivedSong) {
 
-// 	// first save the name of the song
-// 	// if it is provided from command line then use that otherwise
-// 	// set it to 'The Sign' by Ace of Base
-// 	// using ternary function seems to be the easiest way to do this
-// 	// basically, if receivedSong exists then set it to that otherwise 'The Sign'
-// 	var mySong = receivedSong ? receivedSong : 'The Sign Ace of Base';
+	// first save the name of the song
+	// if it is provided from command line then use that otherwise
+	// set it to 'The Sign' by Ace of Base
+	// using ternary function seems to be the easiest way to do this
+	// basically, if receivedSong exists then set it to that otherwise 'The Sign'
+	var mySong = receivedSong ? receivedSong : 'The Sign Ace of Base';
 
-// 	// run a search on the Spotify API by track name for mySong
-// 	Spotify.search({ type: 'track', query: mySong }, function(err, data) {
+	var spotify = new Spotify({
+  	id: '294138ad16734a9eb79f0d7bf6b2e67d',
+  	secret: 'd821b6c01074460797a3085215b58927'
+});
 
-// 		// if an error is caught in the call, display that and exit the function
-// 		if (err) return console.log('Spotify Error: ' + err);
+	// run a search on the Spotify API by track name for mySong
+	spotify.search({ type: 'track', query: mySong }, function(err, data) {
 
-// 		// if the song is not found in the Spotify database, log that and exit the function
-// 		if (data.tracks.items.length == 0) return (console.log('No such song found!'));
+		// if an error is caught in the call, display that and exit the function
+		if (err) return console.log('Spotify Error: ' + err);
 
-// 		// log the command issued to the log.txt file
-// 		logCommand();
+		// if the song is not found in the Spotify database, log that and exit the function
+		if (data.tracks.items.length == 0) return (console.log('No such song found!'));
 
-// 		// log out the song details, but go with the 0th item returned as API can return
-// 		// multiple hits - basicaly go with the best match
-// 		logThis('Artist Name: ' + data.tracks.items[0].artists[0].name);
-// 		logThis('Song Name: ' + data.tracks.items[0].name);
-// 		logThis('Preview Link: ' + data.tracks.items[0].preview_url);
-// 		logThis('Album Title: ' + data.tracks.items[0].album.name);
+		// log the command issued to the log.txt file
+		logCommand();
 
-// 	// end the search function
-// 	});
+		// log out the song details, but go with the 0th item returned as API can return
+		// multiple hits - basicaly go with the best match
+		logThis('Artist Name: ' + data.tracks.items[0].artists[0].name);
+		logThis('Song Name: ' + data.tracks.items[0].name);
+		logThis('Preview Link: ' + data.tracks.items[0].preview_url);
+		logThis('Album Title: ' + data.tracks.items[0].album.name);
 
-// // end the mySpotify function
-// }
+	// end the search function
+	});
+
+// end the mySpotify function
+}
 
 // if the movie-this command is received
 function movieThis(receivedMovie) {
@@ -130,7 +135,7 @@ function movieThis(receivedMovie) {
 	console.log(myMovie)
 
 	// Then run a request to the OMDB API with the movie specified
-	Request("http://www.omdbapi.com/?apikey=b6e94218&?t=" + myMovie + "&y=&plot=short&r=json&tomatoes=true", function (error, response, body) {
+	Request("http://www.omdbapi.com/?t=" + myMovie + "&y=&plot=short&r=json&tomatoes=true&apikey=40e9cece", function (error, response, body) {
 		// console.log(response)
 
 		// If the request is successful (i.e. if the response status code is 200)
